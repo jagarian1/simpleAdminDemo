@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <title>Product App</title>
+    
+        <link rel="stylesheet" type="text/css" href="\amcharts/style.css">
+   
+    
+        <script>
+            Vue.component('component-a', { template: '<div> hello world AAA !!!</div>'})
+            Vue.component('component-b', { template: '<div> hello world BBB !!!</div>'})
+            Vue.component('component-c', { template: '<div> hello world CCC !!!</div>'})
+            
+            var compoentD= { template: '<div> hello world DDD !!!</div>'}
+            var compoentE= { template: '<div> hello world EEE !!!</div>'}
+            var compoentF= { template: '<div> hello world FFF !!!</div>'}
+
+            new Vue({
+                el: '#appComp',
+                components: {
+                    'component-d': CompoentD,
+                    'compoennt-e': ComponentE
+                }
+            })
+        </script>
+    </head>
+
+    <body>
+        <div id="appComp">
+            <component-a></component-a>
+            <component-b></component-b>
+        
+            <componentD></component-c>
+        </div>
+
+
+    <div class="nav=bar"></div>
+    <div id="app">
+        <div class="product">
+            <h1>{{ Product }}</h1>
+        </div>
+    </div>
+
+    <div id="app-2">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">메세지를 뒤집어 봅니다.</button><br/>
+        <span v-bind:title="message">
+            내 위에 잠시 마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니다!
+        </span>
+    </div>
+    
+
+    <!-- 개발버전, 도움되는 콘솔 경고를 포함. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+ 
+        var app = new Vue({
+            el: '#app',
+            data: {
+                product: 'Socks'
+            },
+            method: {
+
+            },
+            computed: {
+
+            },          
+            watch: {
+
+            },
+            filters: {}
+        })
+    </script>
+    <script>
+        var app2 = new Vue({
+            el: '#app-2',
+            data: {
+                message: '이 페이지는 ' + new Date() + ' 에 로드 되었습니다'
+            },
+            methods: {
+                reverseMessage: function() {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+
+        })
+    </script>
+
+
+</body>
+</html>
