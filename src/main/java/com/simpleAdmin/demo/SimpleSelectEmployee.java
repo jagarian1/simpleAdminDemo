@@ -19,7 +19,7 @@ public class SimpleSelectEmployee {
 	
 	public static String url = "jdbc:postgresql://localhost:5432/mqtt";  //[PostgreSQL 14.2, compiled by Visual C++ build 1914, 64-bit]
 	public static String user = "postgres";
-	public static String password = "rkddkwl72";
+	public static String password = "password";
 	
 	public static void main(String[] args) {
 
